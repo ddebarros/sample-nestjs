@@ -1,0 +1,13 @@
+name: sample-nestjs
+services:
+- build_command: yarn build
+- environment_slug: node-js
+  envs:
+  - key: PORT
+    scope: RUN_AND_BUILD_TIME
+    value: 5000
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: ddebarros/sample-nestjs
+  name: sample-nestjs
